@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/assets.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="atm">
+            <img src="/assets/bancoestaafo.png" alt="" style="padding: 0px 40px 0px 40px;" >
+            <div class="screen"> 
+                <h1>Cajero Automático</h1>
+                <h2 id="subtitle">Inicie sesión para continuar:</h2>
+                <div id="login">
+                    <input type="text" id="username" placeholder="Nombre">
+                    <input type="password" id="password" placeholder="Contraseña">
+                    <button onclick="login()">Ingresar</button>
+                </div>
+                <div id="options" style="display: none;">
+                    <h2>Bienvenido, <span id="user-name"></span></h2>
+                    <p class="p1" onclick="consultarSaldo()">→Consultar saldo</p>
+                    <p  class="p2"onclick="ingresarMonto()">→Ingresar monto</p>
+                    <p  class="p3" onclick="retirarMonto()">Retirar monto←</p>
+                    <p  class="p4" onclick="logout()">Salir←</p>
+                    </div>
+                <p id="mensaje"></p>
+                </div>
+                
+            </div>
+            <div class="buttonContainer" id="buttonMenu" style="display: none;">
+                <div class="buttonLeft">
+                    <button class="button" onclick="consultarSaldo()"></button>
+                    <button class="button" onclick="ingresarMonto()"></button>
+                </div>
+                <div class="buttonRight">
+                    <button class="button" onclick="retirarMonto()"></button>
+                    <button class="button" onclick="logout()"></button>
+                </div>
+                </div>
+        </div>
+    
+    <script src="/js.js"></script>
+</body>
+</html>
