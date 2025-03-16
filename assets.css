@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #444;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.atm {
+    background: #999;
+    padding: 76px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.screen {
+
+    background: linear-gradient(to bottom, orange, darkorange);
+    padding: 20px;
+    width: 600px;
+    height: 420px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+h1, h2 {
+    color: white;
+}
+
+p {
+    font-size:23px; /* Tamaño en píxeles */
+}
+
+.p1{
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+}
+
+.p2{
+    padding-top: 30px;
+    position: absolute;
+    align-self: anchor-center;
+}
+ .p3{
+    place-self: end;
+ }
+ 
+ .p4{
+    place-self: end;
+    padding-top: 55px;
+ }
+
+input, button {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+    background: #bbb;
+    border: 2px solid #777;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.buttonContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px; /* Mismo ancho que la pantalla */
+    height: 420px; /* Mismo alto que la pantalla */
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    pointer-events: none; /* Evita interferencias con la pantalla */
+}
+
+.buttonLeft, .buttonRight {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    pointer-events: all; /* Permite hacer clic en los botones */
+}
+
+.buttonLeft {
+    position: absolute;
+    left: -50px; /* Mueve los botones fuera de la pantalla */
+    top: 170px; /* Ajusta altura según el texto */
+}
+
+.buttonRight {
+    position: absolute;
+    right: -50px; /* Mueve los botones fuera de la pantalla */
+    top: 170px;
+}
+
+.button:hover {
+    background: #ddd;
+}
+
