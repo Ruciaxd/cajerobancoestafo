@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/assets.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Contenedor principal de la interfaz -->
+    <div class="container">
+        <!-- Contenedor específico para el cajero automático -->
+        <div class="atm">
+            <!-- Imagen representando el logo del banco o el cajero automático -->
+            <img src="/assets/bancoestaafo.png" alt="" style="padding: 0px 40px 0px 40px;" >
+            
+            <!-- Pantalla del cajero automático que muestra el contenido -->
+            <div class="screen"> 
+                <!-- Título principal de la pantalla -->
+                <h1>Cajero Automático</h1>
+                
+                <!-- Subtítulo que invita al usuario a iniciar sesión -->
+                <h2 id="subtitle">Inicie sesión para continuar:</h2>
+                
+                <!-- Contenedor para el formulario de inicio de sesión -->
+                <div id="login">
+                    <!-- Campo de texto para el nombre de usuario -->
+                    <input type="text" id="username" placeholder="Nombre">
+                    
+                    <!-- Campo de contraseña para el ingreso de la clave -->
+                    <input type="password" id="password" placeholder="Contraseña">
+                    
+                    <!-- Botón para ejecutar la función de inicio de sesión -->
+                    <button onclick="login()">Ingresar</button>
+                </div>
+                
+                <!-- Opciones del cajero que se mostrarán después de iniciar sesión (inicialmente ocultas) -->
+                <div id="options" style="display: none;">
+                    <!-- Mensaje de bienvenida al usuario -->
+                    <h2>Bienvenido, <span id="user-name"></span></h2>
+                    
+                    <!-- Enlaces para realizar acciones en la cuenta -->
+                    <p class="p1" onclick="consultarSaldo()">→Consultar saldo</p>
+                    <p class="p2" onclick="ingresarMonto()">→Ingresar monto</p>
+                    <p class="p3" onclick="retirarMonto()">Retirar monto←</p>
+                    <p class="p4" onclick="logout()">Salir←</p>
+                </div>
+                
+                <!-- Mensaje que puede cambiar dependiendo de las acciones del usuario (mostrar saldo, errores, etc.) -->
+                <p id="mensaje"></p>
+            </div>
+        </div>
+
+        <!-- Contenedor de botones para las acciones del cajero -->
+        <div class="buttonContainer" id="buttonMenu" style="display: none;">
+            <!-- Contenedor para los botones de la izquierda -->
+            <div class="buttonLeft">
+                <!-- Botones que activan las funciones de consultar saldo y depositar monto -->
+                <button class="button" onclick="consultarSaldo()"></button>
+                <button class="button" onclick="ingresarMonto()"></button>
+            </div>
+            
+            <!-- Contenedor para los botones de la derecha -->
+            <div class="buttonRight">
+                <!-- Botones que activan las funciones de retirar monto y cerrar sesión -->
+                <button class="button" onclick="retirarMonto()"></button>
+                <button class="button" onclick="logout()"></button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Enlace al archivo JavaScript que contiene las funciones interactivas -->
+    <script src="/js.js"></script>
+</body>
+</html>
